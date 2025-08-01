@@ -39,8 +39,9 @@ const countdown = setInterval(() => {
 document.getElementById("box").addEventListener("click", () =>{
   const sound = document.getElementById("click_sound");
   sound.currentTime = 0;
-  sound.play();
+  sound.play(); )}
 
 // Start the game
 moveBox();
+
 
