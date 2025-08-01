@@ -36,5 +36,11 @@ const countdown = setInterval(() => {
   }
 }, 1000);
 
+document.getElementById("box").addEventListener("click", () =>{
+  const sound = document.getElementById("click_sound");
+  sound.currentTime = 0;
+  sound.play();
+
 // Start the game
 moveBox();
+
