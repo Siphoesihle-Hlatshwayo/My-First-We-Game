@@ -17,8 +17,12 @@ function moveBox() {
   box.style.top = `${y}px`;
 }
 
-// Update score and move box when clicked
+// Combined click event: play sound, update score, move box
 box.addEventListener("click", () => {
+  const sound = document.getElementById("click_sound");
+  sound.currentTime = 0;
+  sound.play();
+
   score++;
   scoreDisplay.textContent = score;
   moveBox();
@@ -36,12 +40,9 @@ const countdown = setInterval(() => {
   }
 }, 1000);
 
-document.getElementById("box").addEventListener("click", () =>{
-  const sound = document.getElementById("click_sound");
-  sound.currentTime = 0;
-  sound.play(); )}
-
 // Start the game
 moveBox();
+
+
 
 
